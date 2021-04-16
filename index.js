@@ -46,6 +46,6 @@ app.get('/images/:users_img', cors(), (req, res) =>
   res.sendFile(__dirname + '/images/' + req.params.users_img )
 )
 
-app.listen(7000, () => {
+app.listen(process.env.PORT || 7000, () => {
   console.log('Running on port 7000.')
 })
